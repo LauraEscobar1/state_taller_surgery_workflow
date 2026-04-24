@@ -1,0 +1,11 @@
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\SurgeryState.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\DischargedState.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\RegisteredState.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\EvaluatedState.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\controller\SurgeryController.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\PreOperativeState.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\SurgeryStateImpl.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\service\ValidationService.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\context\SurgeryContext.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\state\RecoveryState.java
+C:\Users\PERSONAL\state_taller_surgery_workflow\backend\src\main\java\com\healthcare\surgery\SurgeryApplication.java
