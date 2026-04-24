@@ -1,60 +1,219 @@
+/* Google Material Design */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #1e3c72, #2a5298);
-    color: white;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa;
+    color: #202124;
     text-align: center;
+    min-height: 100vh;
 }
 
-.container {
-    margin-top: 80px;
+.google-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 16px;
 }
 
-h1 {
-    font-size: 38px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 20px;
-    display: inline-block;
-    backdrop-filter: blur(10px);
-    margin: 20px;
-    transition: 0.4s;
-}
-
-#state {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-button {
-    background: linear-gradient(45deg, #2196f3, #00c6ff);
-    border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-/* 🎨 COLORES POR ESTADO */
-
-.registered { background: #2196f3; }
-.evaluated { background: #00acc1; }
-.preop { background: #7e57c2; }
-.surgery { background: #e53935; }
-.recovery { background: #43a047; }
-.discharged { background: #fbc02d; color: black; }
-
-.timeline {
-    margin-top: 30px;
+/* Header estilo Google */
+.google-header {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    margin-bottom: 32px;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo .material-icons-outlined {
+    font-size: 40px;
+    color: #4285f4;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #202124;
+}
+
+/* Card estilo Material */
+.google-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 24px;
+    margin: 24px 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.google-card:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.card-icon {
+    font-size: 24px;
+    color: #5f6368;
+}
+
+.card-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.state-text {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 16px 0;
+    color: #202124;
+}
+
+/* Chip de estado */
+.state-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 16px;
+    background: #e8f0fe;
+    color: #1967d2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Botón estilo Material */
+.google-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a73e8;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.google-button:hover {
+    background: #1557b0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.google-button .material-icons-outlined {
+    font-size: 20px;
+}
+
+/* Timeline estilo Google */
+.timeline-container {
+    margin-top: 40px;
+    padding: 0 16px;
+}
+
+.timeline-track {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: #e8eaed;
+    z-index: 0;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #e8eaed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.step-circle .material-icons-outlined {
+    font-size: 20px;
+    color: #5f6368;
+}
+
+.step-label {
+    font-size: 12px;
+    color: #5f6368;
+    font-weight: 500;
+}
+
+/* Estados activos */
+.timeline-step.active .step-circle {
+    background: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.timeline-step.active .step-circle .material-icons-outlined {
+    color: white;
+}
+
+.timeline-step.active .step-label {
+    color: #1a73e8;
+}
+
+.timeline-step.completed .step-circle {
+    background: #34a853;
+    border-color: #34a853;
+}
+
+.timeline-step.completed .step-circle .material-icons-outlined {
+    color: white;
+}
+
+.timeline-step.completed .step-label {
+    color: #34a853;
+}
+
+/* Colores por estado */
+.registered .state-chip { background: #e8f0fe; color: #1967d2; }
+.registered .card-icon { color: #1967d2; }
+
+.evaluated .state-chip { background: #e6f4ea; color: #137333; }
+.evaluated .card-icon { color: #137333; }
+
+.preop .state-chip { background: #fce8e6; color: #c5221f; }
+.preop .card-icon { color: #c5221f; }
+
+.surgery .state-chip { background: #faddd7; color: #9334e6; }
+.surgery .card-icon { color: #9334e6; }
+
+.recovery .state-chip { background: #feefc3; color: #ea8600; }
+.recovery .card-icon { color: #ea8600; }
+
+.discharged .state-chip { background: #e8f0fe; color: #1967d2; }
+.discharged .card-icon { color: #1967d2; }
