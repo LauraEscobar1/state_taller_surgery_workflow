@@ -16,7 +16,7 @@ public class SurgeryController {
         return context.getCurrentState();
     }
 
-    @PostMapping("/next")
+    @GetMapping("/next")
     public String moveToNextStep() {
         context.nextStep();
         return context.getCurrentState();
